@@ -1,0 +1,98 @@
+<doctype HTML>
+<head>
+<meta charset="UTF-8">
+<title>emissão de certificado schulz</title>
+<style>
+    body{
+        padding:0;
+        margin:0;
+    }
+        h2{
+            color: darkblue;
+        }
+        .centro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            }
+     textarea {
+    width: 200px;
+    height: 30px;
+
+}
+h3{
+    color: blue;
+}
+.imagem{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    height: 160px;
+    background-color: rgb(235, 242, 250);
+    border: 2px solid darkblue;
+    border-radius: 6px;
+    padding: 10px;
+}
+    
+    
+</style>
+</head>
+    <body>
+       
+        <header id="cabeca">
+            <div class="imagem">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.0RQQPMQKB5SmqiWE18vAyAAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="logo da schulz">
+        </div>
+        </header>
+         <div class="centro">
+        <h2>emissão de certificado schulz</h2>
+        <p>preencha o formúlario do schulz com os dados a seguir<p>
+        <h3>equipamentos</h3>
+        <textarea></textarea>
+        <h3> número serie</h3>
+        <textarea></textarea>
+        <h3>cliente</h3>
+        <textarea></textarea>
+        <h3> técnico</h3>
+        <textarea></textarea>
+        <h3>data</h3>
+        <textarea></textarea>
+        <br>
+        <button onclick="mostrar()">criar formulário</button>
+        <br>
+          <div id="resultado"></div>
+        </div>
+      
+
+</textarea>
+<script>
+function mostrar() {
+    const textos = document.querySelectorAll("textarea");
+    const resultado = document.getElementById("resultado");
+    
+    resultado.innerHTML = ""; 
+
+    textos.forEach(textarea => {
+   
+        if (textarea.value.trim() !== "") {
+            const p = document.createElement("p");
+            p.textContent = textarea.value; 
+            resultado.appendChild(p);
+        }
+    });
+}
+</script>
+"
+</body>
+
+
+</doctype>
